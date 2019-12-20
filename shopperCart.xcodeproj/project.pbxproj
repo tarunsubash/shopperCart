@@ -68,17 +68,13 @@
 		BB5EFA9823AC96B40061DFC4 /* shopperCart */ = {
 			isa = PBXGroup;
 			children = (
+				BB5EFABC23ACCD770061DFC4 /* Cart */,
 				BB5EFAAD23AC998B0061DFC4 /* ProductList.json */,
-				BB5EFAB123AC9B530061DFC4 /* ProductModel.swift */,
 				BB5EFA9923AC96B40061DFC4 /* AppDelegate.swift */,
-				BB5EFA9B23AC96B40061DFC4 /* ViewController.swift */,
 				BB5EFA9D23AC96B40061DFC4 /* Main.storyboard */,
-				BB5EFAB823ACAC0A0061DFC4 /* ProductTableViewCell.swift */,
 				BB5EFAA023AC96B50061DFC4 /* Assets.xcassets */,
 				BB5EFAA223AC96B50061DFC4 /* LaunchScreen.storyboard */,
 				BB5EFAA523AC96B50061DFC4 /* Info.plist */,
-				BB5EFAAF23AC9AAC0061DFC4 /* ProductListViewModel.swift */,
-				BB5EFABA23ACAEDC0061DFC4 /* ProductListService.swift */,
 				BB5EFAB723ACAA100061DFC4 /* Utilities */,
 			);
 			path = shopperCart;
@@ -91,6 +87,18 @@
 				BB5EFAB323ACA9880061DFC4 /* JSONLoader.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BB5EFABC23ACCD770061DFC4 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				BB5EFAB123AC9B530061DFC4 /* ProductModel.swift */,
+				BB5EFA9B23AC96B40061DFC4 /* ViewController.swift */,
+				BB5EFAB823ACAC0A0061DFC4 /* ProductTableViewCell.swift */,
+				BB5EFAAF23AC9AAC0061DFC4 /* ProductListViewModel.swift */,
+				BB5EFABA23ACAEDC0061DFC4 /* ProductListService.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

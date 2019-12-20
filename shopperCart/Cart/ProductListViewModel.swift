@@ -17,7 +17,9 @@ class ProductListViewModel {
         return productList
     }
     
-    public func fetchProductsFromService() -> [ProductModel] {
-        return productListService.fetchProductList()
+    public func fetchProductsFromService(completion: @escaping ([ProductModel]) -> ()) {
+        productListService.fetchProductList { (model) in
+            completion(model)
+        }
     }
 }

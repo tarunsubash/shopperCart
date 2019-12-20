@@ -14,9 +14,16 @@ class ViewController: UIViewController {
     var viewModel: ProductListViewModel = ProductListViewModel()
     var productList: [ProductModel] = []
     override func viewDidLoad() {
-        productList = viewModel.fetchProductsFromService()
+        fetchProducts()
         super.viewDidLoad()
         tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    private func fetchProducts() {
+        viewModel.fetchProductsFromService { [unowned self] (model) in
+            self.productList = model
+            print(self.productList.count)
+        }
     }
 }
 
@@ -27,14 +34,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
-        cell.productName?.text = productList[indexPath.row].name
-        if let offerPrice = productList[indexPath.row].offerPrice {
-            cell.price?.text = offerPrice
-            cell.price?.textColor = .red
-        } else {
-            cell.price?.text = productList[indexPath.row].price
-            cell.price?.textColor = .black
-        }
+        cell.configureCell(model: productList[indexPath.row])
         return cell
     }
 }
