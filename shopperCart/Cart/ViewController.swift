@@ -16,14 +16,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         fetchProducts()
         super.viewDidLoad()
-        tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: "cell")
+        let tableViewCell = UINib(nibName: "ProductListTableViewCell", bundle: nil)
+        tableView.register(tableViewCell, forCellReuseIdentifier: "Cell")
     }
     
     private func fetchProducts() {
-        viewModel.fetchProductsFromService { [unowned self] (model) in
-            self.productList = model
-            print(self.productList.count)
-        }
+        productList = viewModel.fetchProductList()
+//        viewModel.fetchProductsFromService { [unowned self] (model) in
+//            self.productList = model
+//            print(self.productList.count)
+//        }
     }
 }
 
@@ -33,7 +35,9 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ProductListTableViewCell
+        let tag = Int(productList[indexPath.row].pid)!
+        cell.configureStepper(value: Double(UserDefaults.standard.integer(forKey: "\(tag)")), tag: tag)
         cell.configureCell(model: productList[indexPath.row])
         return cell
     }

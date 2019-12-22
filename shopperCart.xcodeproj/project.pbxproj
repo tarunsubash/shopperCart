@@ -17,8 +17,10 @@
 		BB5EFAB223AC9B530061DFC4 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5EFAB123AC9B530061DFC4 /* ProductModel.swift */; };
 		BB5EFAB423ACA9880061DFC4 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5EFAB323ACA9880061DFC4 /* JSONLoader.swift */; };
 		BB5EFAB623ACA9BE0061DFC4 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5EFAB523ACA9BE0061DFC4 /* JSONParser.swift */; };
-		BB5EFAB923ACAC0A0061DFC4 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5EFAB823ACAC0A0061DFC4 /* ProductTableViewCell.swift */; };
 		BB5EFABB23ACAEDC0061DFC4 /* ProductListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5EFABA23ACAEDC0061DFC4 /* ProductListService.swift */; };
+		BB5EFAE723AD35040061DFC4 /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5EFAE523AD35040061DFC4 /* ProductListTableViewCell.swift */; };
+		BB5EFAE823AD35040061DFC4 /* ProductListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5EFAE623AD35040061DFC4 /* ProductListTableViewCell.xib */; };
+		BB5F2BEE23ADD88900F34B8C /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F2BED23ADD88900F34B8C /* WishListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +36,10 @@
 		BB5EFAB123AC9B530061DFC4 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		BB5EFAB323ACA9880061DFC4 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		BB5EFAB523ACA9BE0061DFC4 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
-		BB5EFAB823ACAC0A0061DFC4 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		BB5EFABA23ACAEDC0061DFC4 /* ProductListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListService.swift; sourceTree = "<group>"; };
+		BB5EFAE523AD35040061DFC4 /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
+		BB5EFAE623AD35040061DFC4 /* ProductListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListTableViewCell.xib; sourceTree = "<group>"; };
+		BB5F2BED23ADD88900F34B8C /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,11 @@
 			children = (
 				BB5EFAB123AC9B530061DFC4 /* ProductModel.swift */,
 				BB5EFA9B23AC96B40061DFC4 /* ViewController.swift */,
-				BB5EFAB823ACAC0A0061DFC4 /* ProductTableViewCell.swift */,
+				BB5EFAE523AD35040061DFC4 /* ProductListTableViewCell.swift */,
+				BB5EFAE623AD35040061DFC4 /* ProductListTableViewCell.xib */,
 				BB5EFAAF23AC9AAC0061DFC4 /* ProductListViewModel.swift */,
 				BB5EFABA23ACAEDC0061DFC4 /* ProductListService.swift */,
+				BB5F2BED23ADD88900F34B8C /* WishListViewController.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5EFAE823AD35040061DFC4 /* ProductListTableViewCell.xib in Resources */,
 				BB5EFAA423AC96B50061DFC4 /* LaunchScreen.storyboard in Resources */,
 				BB5EFAAE23AC998B0061DFC4 /* ProductList.json in Resources */,
 				BB5EFAA123AC96B50061DFC4 /* Assets.xcassets in Resources */,
@@ -176,11 +183,12 @@
 				BB5EFAB423ACA9880061DFC4 /* JSONLoader.swift in Sources */,
 				BB5EFABB23ACAEDC0061DFC4 /* ProductListService.swift in Sources */,
 				BB5EFA9C23AC96B40061DFC4 /* ViewController.swift in Sources */,
-				BB5EFAB923ACAC0A0061DFC4 /* ProductTableViewCell.swift in Sources */,
 				BB5EFAB623ACA9BE0061DFC4 /* JSONParser.swift in Sources */,
 				BB5EFAB023AC9AAC0061DFC4 /* ProductListViewModel.swift in Sources */,
 				BB5EFA9A23AC96B40061DFC4 /* AppDelegate.swift in Sources */,
 				BB5EFAB223AC9B530061DFC4 /* ProductModel.swift in Sources */,
+				BB5F2BEE23ADD88900F34B8C /* WishListViewController.swift in Sources */,
+				BB5EFAE723AD35040061DFC4 /* ProductListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

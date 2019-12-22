@@ -13,4 +13,5 @@ class ProductModel: Codable {
     let price: String
     let image: String
     let offerPrice: String?
+    let pid: String
 }
